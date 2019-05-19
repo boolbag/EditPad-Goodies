@@ -1,0 +1,380 @@
+﻿JGCSCS
+5
+INI for MishMash color palette
+*.ini;*.inf;*.gitignore
+Rex from RexEgg
+via the http://www.RexEgg.com website
+https://github.com/boolbag/EditPad-Goodies/tree/master/Making%20Text%20Pretty%20-%20Syntax%20Coloring%20and%20Color%20Palettes/Syntax%20Coloring%20Schemes/INI/INI%20for%20MishMash
+
+TRUE
+;
+
+25
+This scheme is specifically intented for the MishMash color palette.
+You can download MishMash here: 
+https://github.com/boolbag/EditPad-Goodies/tree/master/Making%20Text%20Pretty%20-%20Syntax%20Coloring%20and%20Color%20Palettes/Color%20Palettes/MishMash
+
+The scheme itself lives here:
+https://github.com/boolbag/EditPad-Goodies/tree/master/Making%20Text%20Pretty%20-%20Syntax%20Coloring%20and%20Color%20Palettes/Syntax%20Coloring%20Schemes/INI/INI%20for%20MishMash
+
+* I looked at the Just Great Software INI scheme as a point of departure, but wanted to expand the syntax to make the files more lively
+* Separated the 'equal' from the token to its left, so that each have their own color
+* Colored the values
+* To make the scheme more interesting, tried to distinguish between various types of values: 
+     -  integers
+     - hex numbers
+     - some Boolean pairs: true/false, yes/no, show/hide
+     - email addresses
+     - urls
+     - file paths
+     - IP addresses
+
+Design Note: Why the Subschemes
+=====================
+Initially, I had everything in a single coloring scheme. 
+This meant that for Key=Value sequences, I had to had lookaheads and lookbehinds. 
+When I learned about subschemes, I realized this would be more efficient as the string is handed over at the current match point with a guarantee of what has been matched before,
+making lookbehinds unnecessary.
+41
+; Not a lot of variety within INI files, but
+; this example tries to show various kinds of values.
+
+[EditPad Preferences]
+Version=7
+
+
+[Basics First: Integers, Strings]
+Count=9
+Name0=Embarcadero with Grey BG
+; (comments in Italics)
+Name8=MishMash
+
+
+; Warn if sections are improperly formed
+[Close that Bracket!
+ParentForm=FormEditPadPro7
+
+
+[Numbers]
+; integer, hex
+port= 143 
+Color=0xFFFFFF
+
+
+[Paths & Internet]
+; file paths, IP address, email, url
+MyDocs=C:\\Users\\Joe\\Desktop\\
+file="payroll.dat"
+path = "c:/Program Files/Beyond Compare 4/bcomp.exe"
+server= 192.0.2.62
+Feedback= bill@microsoft.com
+KeywordHelp=http://www.example.net?pattern=%KEYWORD%
+
+
+[Some Settings]
+; Make Booleans pop
+AllowDockClientsLeft=true
+AllowDockClientsTop=no
+TopIcon = show
+
+0
+FALSE
+4
+Comment
+
+^[ \t]*+;.*
+FALSE
+FALSE
+28
+0
+
+
+0
+TRUE
+FALSE
+FALSE
+FALSE
+
+
+
+
+FALSE
+
+Section
+
+^[ \t]*+\[[^\]\r\n]++\]
+FALSE
+FALSE
+26
+0
+
+
+0
+FALSE
+FALSE
+TRUE
+FALSE
+
+
+
+
+FALSE
+
+Section (unclosed)
+
+^[ \t]*+\[[^\]\r\n]++$
+FALSE
+FALSE
+30
+0
+
+
+0
+FALSE
+FALSE
+TRUE
+FALSE
+
+
+
+
+FALSE
+]
+Key
+
+^[^;=\r\n]++(?==)
+FALSE
+FALSE
+12
+0
+
+
+3
+FALSE
+FALSE
+FALSE
+FALSE
+
+0
+
+
+FALSE
+
+0
+2
+Equal after Key
+1
+0
+FALSE
+0
+
+
+1
+Equal sign
+We're guaranteed to have an equal sign after a Value because of the Lookahead
+=[ \t]*
+FALSE
+FALSE
+15
+0
+
+
+4
+FALSE
+FALSE
+FALSE
+FALSE
+
+
+
+
+FALSE
+
+Value after Equal
+1
+0
+FALSE
+0
+
+
+9
+Value (numeric)
+
+\d+(?=[ \t]*$)
+FALSE
+FALSE
+19
+0
+
+
+2
+FALSE
+FALSE
+FALSE
+FALSE
+
+
+
+
+FALSE
+
+Value (hex)
+
+(?i)0x[a-f0-9]+(?=[ \t]*$)
+FALSE
+FALSE
+20
+0
+
+
+2
+FALSE
+FALSE
+FALSE
+FALSE
+
+
+
+
+FALSE
+
+Value (email)
+
+(?i)[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}(?=[ \t]*$)
+FALSE
+FALSE
+2
+0
+
+
+2
+FALSE
+FALSE
+FALSE
+FALSE
+
+
+
+
+FALSE
+
+Value (url)
+Crude but fast
+(?i)(?:https?|ftp|file)://\S+
+FALSE
+FALSE
+2
+0
+
+
+2
+FALSE
+FALSE
+FALSE
+FALSE
+
+
+
+
+FALSE
+
+Value (IP)
+RB library
+(?:[0-9]{1,3}\.){3}[0-9]{1,3}(?=[ \t]*$)
+FALSE
+FALSE
+27
+0
+
+
+2
+FALSE
+FALSE
+FALSE
+FALSE
+
+
+
+
+FALSE
+
+Value (bool)
+
+(?i)(?:true|false|yes|no|show|hide)(?=[ \t]*$)
+FALSE
+FALSE
+3
+0
+
+
+2
+FALSE
+FALSE
+FALSE
+FALSE
+
+
+
+
+FALSE
+
+Value (Path or File, unquoted)
+Crude. No spaces allowed.
+[^\s./\\]*[\\./]\S*(?=[ \t]*$)
+FALSE
+FALSE
+41
+0
+
+
+2
+FALSE
+FALSE
+FALSE
+FALSE
+
+
+
+
+FALSE
+
+Value (Path or File, quoted)
+Crude. Allows spaces.
+"[^"\s./\\]*[\\./][^"\r\n\t]*"(?=[ \t]*$)
+FALSE
+FALSE
+41
+0
+
+
+2
+FALSE
+FALSE
+FALSE
+FALSE
+
+
+
+
+FALSE
+
+Value (generic)
+Catch-All that colors the rest of the line and sends us back to the Default scheme
+.*
+FALSE
+FALSE
+18
+0
+
+
+2
+FALSE
+FALSE
+FALSE
+FALSE
+
+
+
+
+FALSE
+
