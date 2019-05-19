@@ -20,9 +20,9 @@ You can [download MishMash here](https://github.com/boolbag/EditPad-Goodies/tree
 
 2. Installing the actual syntax-coloring scheme
  
-   * Manual Method: drop the `.jgcscs` file at the top of this page into the `%APPDATA%\JGsoft\EditPad Pro 7` folder
+   * Manual Method: drop the `.jgcscs` file at the top of this page into the `%APPDATA%\JGsoft\EditPad Pro 7` folder (to navigate to that folder, copy that path and paste it in the address bar of your file manager, e.g. Windows Explorer)
 
-   * From within the program: this will work once I'm able to upload the schemes to EditPad (broken as of May 19 2019). Like for all other syntax-coloring schemes, within EditPad, go to _Options / Configure File Types / Colors and Syntax Tab / Syntax Coloring Scheme pull-down menu_ and hit _Download_.
+   * Semi-Automatic Method (this will work once I'm able to upload the schemes to EditPad, which was broken on May 19 2019). Like for all other syntax-coloring schemes, within EditPad, go to _Options / Configure File Types / Colors and Syntax Tab / Syntax Coloring Scheme pull-down menu_ and hit _Download_.
 
 
 ## A Few Words About the Scheme
