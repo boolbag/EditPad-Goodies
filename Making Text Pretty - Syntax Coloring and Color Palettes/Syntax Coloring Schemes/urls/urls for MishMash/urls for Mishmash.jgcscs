@@ -1,0 +1,110 @@
+﻿JGCSCS
+5
+urls for MishMash color palette
+*.urls
+Rex (from RexEgg)
+Please contact via http://www.RexEgg.com
+https://www.RexEgg.com
+
+TRUE
+;
+
+51
+Hello there,
+
+Welcome to my urls scheme for the MishMash color palette. 
+
+This scheme is specifically intented for the MishMash color palette.
+You can download MishMash here: 
+https://github.com/boolbag/EditPad-Goodies/tree/master/Making%20Text%20Pretty%20-%20Syntax%20Coloring%20and%20Color%20Palettes/Color%20Palettes/MishMash
+
+The scheme itself lives on GitHub:
+https://github.com/boolbag/EditPad-Goodies/tree/master/Making%20Text%20Pretty%20-%20Syntax%20Coloring%20and%20Color%20Palettes/Syntax%20Coloring%20Schemes/urls/urls%20for%20MishMash
+
+This scheme is for files with an "urls" extension which are meant to be used as a customs "internet shortcuts" file.
+When you double-click the file, the first url on each line gets open in the browser, unless it is within parentheses.
+
+This is executed via a simple AutoHotkey script, which is set as the default handler for "urls" files. Install AutoHotkey, save the following script as "HandleUrlsFiles.ahk", right-click the file, select compile, right-click a "urls" file (you can use the sample in the box below), set HandleUrlsFiles.exe as the default handler.
+
+#NoEnv  ; Recommended for all scripts. Avoids checking empty variables to see if they are environment variables.
+#SingleInstance force; If already running, script is not allowed to run again.
+
+; Opens one url per line, unless it is between parentheses
+
+urls_file_name := A_Args[1]
+browser := "palemoon.exe" ; or chrome.exe, firefox.exe etc.
+
+Try {
+      Loop, Read, %urls_file_name%
+      {
+         match_position := RegExMatch(A_LoopReadLine, "\([^)]*\)(*SKIP)(*FAIL)|(?i)(?:file|https?):\S+", matched_url)
+         if(match_position > 0) {
+            ; launches url in default browser if it can understand it
+            ; a properly formed url can be launched with Run %url% but this allows us to pass other kinds of strings to the browser
+            Run, %browser% "%matched_url%" 
+            Sleep 50
+         }
+      }
+
+    } 
+Catch e {
+      message := "Could not deal with this file: `n`n" . urls_file_name
+      title := "Error handling file"
+      Gui, Color, 282828
+      Gui, Font, s14, Consolas
+      Gui, Add, Edit, w600 h200 ReadOnly cFF0080, %message%
+      Gui, Show, , %title%
+      Gui, +LastFound
+      Gui, Add, Edit,, 
+      Gui, Show
+      ControlSend, Edit1, ^{Home}
+      WinWaitClose, %title%
+} 
+ExitApp
+21
+┌──────┐
+│ IMDB │
+└──────┘
+https://www.imdb.com/title/tt0483985/ (Reel Rock 1 - Front Range Freaks [2003 tt0483985 90)
+https://www.imdb.com/title/tt1139585/ (Reel Rock 2 - First Ascent [2006 7.5 tt1139585 127)
+https://www.imdb.com/title/tt1144805/ (Reel Rock 3 - King Lines[ 2007 7.8 tt1144805 65)
+https://www.imdb.com/title/tt1462651/ (Reel Rock 4 - The Sharp End [2007 8.0 tt1462651 64)
+https://www.imdb.com/title/tt3473064/ (Reel Rock 5 [2010 8.2 tt3473064)
+https://www.imdb.com/title/tt3472894/ (Reel Rock 6 [2011 8.2 tt3472894)
+https://www.imdb.com/title/tt2826922/ (Reel Rock 7 [2012 8.5 tt2826922 103)
+https://www.imdb.com/title/tt3216510/ (Reel Rock 8 [2013 7.9 tt3216510)
+https://www.imdb.com/title/tt3784160/ (Reel Rock 9 - Valley Uprising [2014 8.2 tt3784160)
+https://www.imdb.com/title/tt5068574/ (Reel Rock 10 [2015 8.2 tt5068574)
+https://www.imdb.com/title/tt6221322/ (Reel Rock 11 [2016 8.5 tt6221322)
+https://www.imdb.com/title/tt7708168/ (Reel Rock 12 [2017 8.4 tt7708168)
+https://www.imdb.com/title/tt9546954/ (Reel Rock 13 [2018 8.2 tt9546954 115)
+
+┌─────────────────┐
+│ Full Collection │
+└─────────────────┘
+https://senderfilms.com/shop/product/details/3818/the-complete-collection
+0
+FALSE
+1
+url
+
+(?i)\b(?:file|https?):\S+
+FALSE
+FALSE
+16
+1
+
+
+0
+TRUE
+FALSE
+FALSE
+FALSE
+
+
+
+
+FALSE
+
+0
+0
