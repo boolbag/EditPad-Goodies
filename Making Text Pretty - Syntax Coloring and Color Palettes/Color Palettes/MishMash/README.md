@@ -6,7 +6,7 @@ The MishMash Color Palette for EditPad Pro
 ### September 2019 news flash:
 This page now has two versions of MishMash:
  1. one for EPP7 (hard to import, see detailed instructions)
- 2. one for EPP8 (easy to import) 
+ 2. one for EPP8 (easy to import). This is a straight port of the version for EPP7 (so far I haven't taken advantage of the new color palette features in EPP8).
 
 ---
 
