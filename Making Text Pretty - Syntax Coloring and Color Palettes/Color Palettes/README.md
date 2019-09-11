@@ -45,7 +45,7 @@ I lied. The names of some labels in the color palette do matter sometimes. When 
 
 ### A Template to Keep Things Straight
 
-When I created the MishMash scheme, I found that the only way to keep the information straight was to create a template to keep track of colors as they appear, their RGB values and their uses.
+When I created the MishMash scheme (for EPP 7), I found that the only way to keep the information straight was to create a template to keep track of colors as they appear, their RGB values and their uses. **Please note that I have not yet adapted the template to take advantage of additional features in Edit Pad Pro 8.**
 
 This gave me a spreadsheet with several tables. Here are some screenshots. You can [download the template](https://github.com/boolbag/EditPad-Goodies/blob/master/Making%20Text%20Pretty%20-%20Syntax%20Coloring%20and%20Color%20Palettes/Color%20Palettes/MishMash-EPP-Worksheet.xlsx) to adapt it to your needs. I won't explain everything because I believe that rather than reading words, the easiest will be to **pay attention to the headings** and start working it yourself to get some hands-on experience. 
 
