@@ -3,6 +3,12 @@ If you don't have EditPad **[click here for a free trial](http://yu8.us/eppdemo)
 The MishMash Color Palette for EditPad Pro
 ===
 
+### September 2019 news flash:
+This page now has two versions of MishMash:
+ 1. one for EPP7 (hard to import, see detailed instructions)
+ 2. one for EPP8 (easy to import) 
+
+---
 
 The MishMash color palette can work with any file type, but let's start with screenshots of it with some languages that have tailor-made syntax-coloring schemes for it.
 
@@ -36,6 +42,17 @@ Adapting an existing scheme for MishMash is easy. More about this further down t
 
 # How to Import the MishMash Color Palette into EditPad
 
+## TL;DR: using EditPad Pro 8 or above? It's easy.
+
+ - Download _MishMash.ini_ at the top of this page
+ - In EPP8, select _Options / Configure File Types_
+ - Select a File Type with which you'd like to try MishMash (you can revert in a flash)
+ - Click on the _Colors and Syntax_ tab
+ - Click _Customize_
+ - Click _Import_ and select _MishMash.ini_
+ - Click _Apply_ and _OK_ twice
+
+## Using EditPad Pro 7: It's harder. Follow the instructions below.
 
 First off, if you don't have EditPad **[click here for a free trial](http://yu8.us/eppdemo)**.
 
@@ -91,7 +108,7 @@ Note the huge line numbers on the screenshot: **search for the sections, don't t
 * Note the line number at which the first section begins (_Options / Line Numbers_)
 * Delete both sections completely (the screenshot above is partial, you have to select all the values under the two headings) 
 * Save the file but don't close.
-* Open [this file](https://github.com/boolbag/EditPad-Goodies/blob/master/Making%20Text%20Pretty%20-%20Syntax%20Coloring%20and%20Color%20Palettes/Color%20Palettes/MishMash/MishMash-Color-Palette.ini), click _Raw_ at the top right, save and open in EditPad. It contains the correct values for _MishMash_.
+* Open [this file](https://github.com/boolbag/EditPad-Goodies/blob/master/Making%20Text%20Pretty%20-%20Syntax%20Coloring%20and%20Color%20Palettes/Color%20Palettes/MishMash/MishMash-Color-Palette-EPP7.ini), click _Raw_ at the top right, save and open in EditPad. It contains the correct values for _MishMash_.
 
 
 ![New Color Palette](https://github.com/boolbag/EditPad-Goodies/blob/master/Making%20Text%20Pretty%20-%20Syntax%20Coloring%20and%20Color%20Palettes/Color%20Palettes/MishMash/img/raw-button.jpg)
