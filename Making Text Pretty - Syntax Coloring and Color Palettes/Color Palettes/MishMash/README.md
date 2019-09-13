@@ -44,7 +44,7 @@ Adapting an existing scheme for MishMash is easy. More about this further down t
 
 ## TL;DR: using EditPad Pro 8 or above? It's easy.
 
- - Download _MishMash.ini_ at the top of this page
+ - Download _MishMash.ini_ at the top of this page (click the file, click _Raw_, select _File/Save As_)
  - In EPP8, select _Options / Configure File Types_
  - Select a File Type with which you'd like to try MishMash (you can revert in a flash)
  - Click on the _Colors and Syntax_ tab
