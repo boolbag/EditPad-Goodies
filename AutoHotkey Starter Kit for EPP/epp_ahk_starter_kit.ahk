@@ -36,6 +36,12 @@ Sleep 10
 Send u{Enter}
 return
 
+$^+t:: ; Try to reopen the last closed file
+Send !f  ; Alt F
+Sleep 10 
+Send {Down}{Right}{Enter}
+return
+
 ; Ctrl + Alt + C: toggle Edit/Copy As HTML, Copy, toggle back off
 ; ASSUMES: 
 ; 1. that initial status of Edit/Copy as HTML is off

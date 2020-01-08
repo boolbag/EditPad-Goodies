@@ -13,6 +13,7 @@ When you run this script (and typically you would include it in the list of prog
 - **Zoom In** (increase font size): Ctrl + Numpad Plus  
 - **Zoom Out** (reduce font size): Ctrl + Numpad Minus  
 - **Load Saved Layout** (the first on the list): Shift + F5
+- **Reopen Last Closed File**: Ctrl + Shift + T
 - **Copy As HTML** (toggles ON, copies, toggles OFF): Ctrl + Alt + C
 
 This last shortcut assumes that in EPP, Ctrl + Alt + Shift + C is mapped to _Edit/Copy as HTML_. It sounds like a macro could do this, but since EPP empties the html section of the Windows clipboard when the option is toggled off, it's a little more complex than that.
@@ -39,6 +40,11 @@ This only works if your keyboard has a numeric keypad. Of course you can change 
 If you don't already have a saved layout (the position of various panels on the screen), save one now via _View / Custom Layouts / Save Layout_.
 
 Then move a few things around in EditPad: for instance, detach a panel. They press Shift + F5: the saved layout should be restored.
+
+### Testing "Reopen Last Closed File"
+
+Open a file. Close it. Press Ctrl + Shift + T: it should reopen.
+Ususally this works with tabs that you close and that have been open for a long time, but it's not fool-proof, at it reopens the first file on the _File/Open_ list, and I've seen cases when closing a file doesn't place it on top of the stack.
 
 ### Testing "Paste the underlying HTML"
 - In EPP8, make sure that Edit / Copy as HTML is checked
