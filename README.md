@@ -7,6 +7,7 @@ The title says it all: the purpose of this repo is to share cool stuff we've mad
 
  - [color palettes](/Making%20Text%20Pretty%20-%20Syntax%20Coloring%20and%20Color%20Palettes/Color%20Palettes) (which can be applied to various languages)
  - [syntax coloring schemes](/Making%20Text%20Pretty%20-%20Syntax%20Coloring%20and%20Color%20Palettes/Syntax%20Coloring%20Schemes) for specific languages / file types
+ - An [AutoHotkey Starting Kit for EditPad](https://github.com/boolbag/EditPad-Goodies/tree/master/AutoHotkey%20Starter%20Kit%20for%20EPP)
  - file navigation for specific languages / file types
  - useful scripts or binaries that can be called via EPP macros
  - [inspiring screenshots](Screenshots%20for%20Inspiration%20-%20Toolbars%2C%20Layouts) of EPP layouts and toolbars

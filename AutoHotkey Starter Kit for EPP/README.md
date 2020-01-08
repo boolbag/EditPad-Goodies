@@ -3,7 +3,7 @@ First: If you don't have EditPad **[click here for a free trial](http://yu8.us/e
 AutoHotkey Starter Kit for EditPad Pro
 ==
 
-On the EditPad forum, I've often found myself suggesting solutions that involve AutoHotkey. To make it dead-easy to get started, I thought I'd offer a "starter kit" containing some useful additions to EditPad. You can then expand the main file (*epp_ahk_starter_kit.ahk*)to suit your needs (or turn off features).
+On the EditPad forum, I've often found myself suggesting solutions that involve AutoHotkey. To make it dead-easy to get started, I thought I'd upload a "starter kit" containing some useful additions to EditPad. You can then expand the main file (*epp_ahk_starter_kit.ahk*) to suit your needs (or turn off features).
 
 
 ## Features
@@ -11,8 +11,8 @@ On the EditPad forum, I've often found myself suggesting solutions that involve 
 When you run this script (and typically you would include it in the list of programs that run at start-up), a few new keyboard shortcuts start functioning inside of EditPad. These shortcuts can be customized.
 
 - **Zoom In** (increase font size): Ctrl + Numpad Plus  
-- **Zoom Out** (increase font size): Ctrl + Numpad Minus  
-- **Load Saved Layout (the first on the list)**: Shift + F5
+- **Zoom Out** (reduce font size): Ctrl + Numpad Minus  
+- **Load Saved Layout** (the first on the list): Shift + F5
 - **Copy As HTML** (toggles ON, copies, toggles OFF): Ctrl + Alt + C
 
 This last shortcut assumes that in EPP, Ctrl + Alt + Shift + C is mapped to _Edit/Copy as HTML_. It sounds like a macro could do this, but since EPP empties the html section of the Windows clipboard when the option is toggled off, it's a little more complex than that.
@@ -23,8 +23,8 @@ This last hotkey is set-up to work system-wide, as you might want to paste the u
 
 ## How to Install
 
-- Install AutoHotkey by clicking the blue button at the top of [this page](https://www.autohotkey.com/download/). Don't worry, it won't eat your machine… **It's only three megabytes!** 
-- Download _AutoHotkeyStarterKitforEPP.zip_ to a convenient folder
+- Install AutoHotkey by clicking the blue button at the top of [this page](https://www.autohotkey.com/download/). Don't worry, it won't eat up your machine… **It's only three megabytes!** 
+- Download [_AutoHotkeyStarterKitforEPP.zip_](https://github.com/boolbag/EditPad-Goodies/raw/master/AutoHotkey%20Starter%20Kit%20for%20EPP/AutoHotkeyStarterKitforEPP.zip) to a convenient folder
 - Unzip
 - Double-click *epp_ahk_starter_kit.ahk*
 
@@ -36,9 +36,9 @@ This only works if your keyboard has a numeric keypad. Of course you can change 
 
 ### Testing "Load Saved Layout"
 
-If you don't already have a saved layout (the position of various panels on the screen) do so now via View / Custom Layouts / Save Layout.
+If you don't already have a saved layout (the position of various panels on the screen), save one now via _View / Custom Layouts / Save Layout_.
 
-Then move a few things around. They press Shift + F5: the saved layout should be restored.
+Then move a few things around in EditPad: for instance, detach a panel. They press Shift + F5: the saved layout should be restored.
 
 ### Testing "Paste the underlying HTML"
 - In EPP8, make sure that Edit / Copy as HTML is checked
@@ -69,12 +69,12 @@ If you are not sure what this _Copy as HTML_ is about, please page down and read
 ## How to Change the Hotkeys
 - Edit *epp_ahk_starter_kit.ahk*
 - As an example, take the line that starts with _^!v::_
-- ^ stands for Ctrl
-- ! stands for Alt
-- v stands for the letter v
-- + stands for Shift
-- example: ^!+v:: maps to Ctrl + Alt + Shift + V
-- for more, please look up AutoHotkey shortcut syntax
+- '^' stands for Ctrl
+- '!' stands for Alt
+- 'v' stands for the letter v
+- '+' stands for Shift
+- example: _^!+v::_ maps to Ctrl + Alt + Shift + V
+- for more, please look up [AutoHotkey shortcut syntax](https://www.autohotkey.com/docs/Hotkeys.htm) and ask on the [AutoHotkey forum](https://www.autohotkey.com/boards/).
 
 ## How to Make the Shortcuts Available After Each Reboot
 
@@ -82,6 +82,7 @@ You need to run the script at Start-up. It's tiny, and IMO it's a good way to ge
 
 - Right-click *epp_ahk_starter_kit.ahk*, select _Create Shortcut_
 - Assuming Windows 10, in your file manager, paste:
+
 **C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp**
 - Move the shortcut to that folder
 
