@@ -500,7 +500,7 @@ A GitHub special: ~~strikethrough~~ in MishMash this is black on black
 (?<![\\~])~~(?![ ~])[^~]+~~(?!~)
 FALSE
 FALSE
-f10
+red
 0
 
 
