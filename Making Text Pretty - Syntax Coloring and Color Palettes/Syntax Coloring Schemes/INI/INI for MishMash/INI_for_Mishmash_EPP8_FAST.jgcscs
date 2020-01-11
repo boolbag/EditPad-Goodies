@@ -277,8 +277,9 @@ Value after Equal
 10
 Value (color)
 RGB color: there are six formats, specified by the capturing groups. Chose the one that matches EPP color palettes, left the others as comments
-25
+26
 (?i)
+(?<!\d)
 # For RGB preview to work, the scheme element’s regular expression needs to contain specific named capturing groups.
 
 # 1. A group named “CSS” that matches a CSS color constant like #639 or #663399 or rebeccapurple
