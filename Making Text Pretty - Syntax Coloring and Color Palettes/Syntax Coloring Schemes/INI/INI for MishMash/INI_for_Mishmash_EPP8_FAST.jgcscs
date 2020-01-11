@@ -277,7 +277,7 @@ Value after Equal
 10
 Value (color)
 RGB color: there are six formats, specified by the capturing groups. Chose the one that matches EPP color palettes, left the others as comments
-19
+25
 (?i)
 # For RGB preview to work, the scheme element’s regular expression needs to contain specific named capturing groups.
 
@@ -294,7 +294,13 @@ RGB color: there are six formats, specified by the capturing groups. Chose the o
 # (?<R>[a-f0-9]{2})(?<G>[a-f0-9]{2})(?<B>[a-f0-9]{2})
 
 # 5. 3 groups named “Rd”, “Gd”, and “Bd” that match decimal numbers between 0 and 255.
-# 5. 3 groups named “Rp”, “Gp”, and “Bp” that match decimal numbers between 0 and 100.
+# (?(DEFINE)(?'num_0_255'25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9]))
+# (?<Rd>(?P>num_0_255)),[ \t]?(?<Gd>(?P>num_0_255)),[ \t]?(?<Bd>(?P>num_0_255))
+
+# 6. 3 groups named “Rp”, “Gp”, and “Bp” that match decimal numbers between 0 and 100.
+# (?(DEFINE)(?'num_0_100'100|[1-9]?[0-9]))
+# (?<Rp>(?P>num_0_100)),[ \t]?(?<Gp>(?P>num_0_100)),[ \t]?(?<Bp>(?P>num_0_100))
+
 (?=[ \t]*$)
 
 FALSE
