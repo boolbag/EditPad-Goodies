@@ -526,11 +526,11 @@ TRUE
 0
 0
 Bold with Stars
-Two **
+Two ** # color used to be Preprocessor statement
 (?<![\\*])\*\*(?![ *])[^*]+\*\*(?!\*)
 FALSE
 FALSE
-preproc
+mue
 0
 
 
@@ -556,11 +556,11 @@ TRUE
 0
 0
 Bold with Underscores
-Two __
+Two __  # color used to be Preprocessor statement
 (?<![\\_])__(?![ _])[^_]+__(?!_)
 FALSE
 FALSE
-preproc
+mue
 0
 
 
@@ -586,11 +586,11 @@ TRUE
 0
 0
 Italics with underscore
-single _underscore_
+single _underscore_ # color used to be hint message
 (?<![\\_])_(?![ _])[^_]+_(?!_)
 FALSE
 FALSE
-hint
+typ
 0
 
 
@@ -616,11 +616,11 @@ TRUE
 0
 0
 Italics with Star
-*single star*
+*single star* # color used to be hint message
 (?<![\\*])\*(?![ *])[^*]+\*(?!\*)
 FALSE
 FALSE
-hint
+typ
 0
 
 

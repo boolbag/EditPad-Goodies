@@ -55,7 +55,7 @@ You add a blockquote by using the "greater-than" symbol, i.e. `>`:
 
 Now of course you can make things **bold** using two stars or __underscores__.
 To _italicize_, it's the same idea but with *a single star or underscore*.
-But the really tricky thing is that two `~` (squiggle characters) create a ~~strikethrough.~~ 
+But the really tricky thing is that two `~` (squiggle characters) create a ~~strikethrough.~~
 
 
 ##### What Else?
